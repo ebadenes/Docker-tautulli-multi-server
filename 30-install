@@ -1,0 +1,19 @@
+#!/usr/bin/with-contenv bash
+
+# If variable $ADVANCED_GIT_BRANCH, set branch to $ADVANCED_GIT_BRANCH, otherwise, default to master
+[ "$ADVANCED_GIT_BRANCH" ] || \
+	ADVANCED_GIT_BRANCH="master"
+
+[ "$ADVANCED_GIT_REPO" ] || \
+	ADVANCED_GIT_REPO="https://github.com/zSeriesGuy/Tautulli.git"
+
+INSTALL_FOLDER="/app/tautulli"
+
+# Install app 
+[[ ! -d "${INSTALL_FOLDER}/.git" ]] && \
+	git clone --branch "$ADVANCED_GIT_BRANCH" "$ADVANCED_GIT_REPO" "${INSTALL_FOLDER}" && cd "${INSTALL_FOLDER}" && git checkout V3.0.00
+
+# Permissions
+chown -R abc:abc \
+	/config \
+	"${INSTALL_FOLDER}"

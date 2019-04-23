@@ -3,7 +3,7 @@
 
 ## Thanks
 [Tautulli][appurl] For the original application
-[zSeriesGuy][for] For the fork
+[zSeriesGuy][fork] For the fork
 
 ## build
 To build the container
