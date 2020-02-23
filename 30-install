@@ -11,7 +11,7 @@ INSTALL_FOLDER="/app/tautulli"
 
 # Install app 
 [[ ! -d "${INSTALL_FOLDER}/.git" ]] && \
-	git clone --branch "$ADVANCED_GIT_BRANCH" "$ADVANCED_GIT_REPO" "${INSTALL_FOLDER}" && cd "${INSTALL_FOLDER}" && git checkout V3.0.00
+	git clone --branch "$ADVANCED_GIT_BRANCH" "$ADVANCED_GIT_REPO" "${INSTALL_FOLDER}" && cd "${INSTALL_FOLDER}" && git checkout V4.0.09
 
 # Permissions
 chown -R abc:abc \
